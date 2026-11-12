@@ -7,7 +7,7 @@
 # Programmer: Mohammed Azhaan Ali
 # Email Address: azhaanalimohammed@lewisu.edu
 #
-# Course: CPSC 44000 - Software Engineering
+# Course: CPSC 60500 - Software Engineering
 # Section:  N/A (No separate course section)
 # Date Completed: 11-11-2026
 #
