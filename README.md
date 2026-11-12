@@ -51,6 +51,23 @@ sides are as close as possible.
 On systems where Python is available as `python3`,
 use `python3 fermat_near_misses.py` instead.
 
+## Running the Windows Executable
+
+The project also includes a standalone Windows executable.
+
+1. Download or clone the GitHub repository.
+2. Open PowerShell in the downloaded project folder.
+3. Run the following command:
+
+```powershell
+.\fermat_near_misses.exe
+```
+
+4. Enter n (3 through 11) and k (greater than 10).
+5. The program will display the near-miss results and the final smallest relative miss.
+
+The executable does not require a separate Python installation.
+
 ## Example
 
 Input:
