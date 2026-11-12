@@ -8,7 +8,7 @@
 # Email Address: azhaanalimohammed@lewisu.edu
 #
 # Course: CPSC 44000 - Software Engineering
-# Section: 
+# Section:  N/A (No separate course section)
 # Date Completed: 11-11-2026
 #
 # External Files Required: None
@@ -56,8 +56,11 @@
 
 def get_integer(prompt, minimum, maximum=None):
     """Ask the user for an integer within the allowed range."""
+    # Keep requesting input until the user enters a valid integer
+# that satisfies the required minimum value.
     while True:
         try:
+            # Read the user's input and convert it to an integer.
             value = int(input(prompt))
 
             if value < minimum:
@@ -80,7 +83,8 @@ def find_near_misses(n, k):
     # Track the smallest relative miss found so far.
     best_relative_miss = None
     
-
+# Store the values associated with the smallest relative miss found.
+# None indicates that no candidate has been evaluated yet.
     best_result = None
 
     # Search all allowed values of x.
@@ -93,18 +97,21 @@ def find_near_misses(n, k):
             target = x ** n + y ** n
 
             # Find the largest integer z with z^n <= target.
+            # Set the lower and upper bounds for the binary search.
             low = 1
             high = 2 * k + 1
 
             # Binary search avoids floating-point rounding errors.
             while low < high:
+                # Calculate the midpoint of the current search interval.
                 middle = (low + high + 1) // 2
 
                 if middle ** n <= target:
                     low = middle
                 else:
                     high = middle - 1
-
+# Identify the two neighboring integer values whose powers
+# may be closest to the calculated target.
             lower_z = low
             upper_z = lower_z + 1
 
@@ -128,7 +135,8 @@ def find_near_misses(n, k):
                     relative_miss < best_relative_miss):
 
                 best_relative_miss = relative_miss
- 
+ # Save the current combination and its actual miss
+# because it improves the smallest relative miss.
                 best_result = (x, y, z, actual_miss)
 
                 print(
@@ -153,7 +161,8 @@ def main():
     print("======================================")
     print(" Fermat's Last Theorem - Near Misses")
     print("======================================")
-
+# Get the exponent n and the upper search limit k
+# from the user after validating both inputs.
     n = get_integer("Enter n (3 to 11): ", 3, 11)
     k = get_integer("Enter k (greater than 10): ", 11)
 
