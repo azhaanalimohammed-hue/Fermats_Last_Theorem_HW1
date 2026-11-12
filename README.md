@@ -3,7 +3,7 @@
 
 ## Software Engineering Assignment 1
 
-**Course:** CPSC 44000 - Software Engineering  
+**Course:** CPSC 60500 - Software Engineering  
 **Programmer:** Mohammed Azhaan Ali  
 **Language:** Python 3
 
